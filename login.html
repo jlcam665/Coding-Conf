@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+    </head>
+    <body>
+        <form action="">
+            <fieldset>
+                <legend>Send a message!</legend>
+                <label for="name">Name</label>
+                <input name="te" type="text" id="name" placeholder="John Doe" required> <br> <br>
+
+                <label for="email">Email</label>
+                <input name="em" type="email" id="email" placeholder="johndoe@email.com" required> <br> <br>
+
+                <label for="message">Message</label>
+                <textarea name="ta" id="message" minlength="3" placeholder="Hi Jane Doe! Lovely seeing you."></textarea> <br> <br>
+
+                <input type="submit" value="Submit"> <br> <br>
+            </fieldset>
+        </form>
+    </body>
 </html>
