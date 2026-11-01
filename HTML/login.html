@@ -12,20 +12,32 @@
                 <a href="../HTML/index.html" title="Coding Conference"><img src="../assets/logo-full.svg" alt="Coding Conf Logo"></a>
             </nav>
         </header>
+        <h1>Your Journey to Coding Conf 2026 Starts Here!</h1>
+        <p>Secure your spot at next year's biggest coding conference.</p>
 
         <form action="">
             <fieldset>
-                <legend>Send a message!</legend>
-                <label for="name">Name</label>
-                <input name="te" type="text" id="name" placeholder="John Doe" required> <br> <br>
-
-                <label for="email">Email</label>
-                <input name="em" type="email" id="email" placeholder="johndoe@email.com" required> <br> <br>
-
-                <label for="message">Message</label>
-                <textarea name="ta" id="message" minlength="3" placeholder="Hi Jane Doe! Lovely seeing you."></textarea> <br> <br>
-
-                <input type="submit" value="Submit"> <br> <br>
+                <label for="imageUpload">
+                    Upload Avatar
+                </label> <br>
+                <input type="file" id="imageUpload" name="image" accept="image/*">
+                <br> <br>
+                <label for="name">
+                    Full Name
+                </label> <br>
+                <input name="te" type="text" id="name" placeholder="John Doe" required>
+                <br> <br>
+                <label for="email">
+                    Email Address
+                </label> <br>
+                <input name="em" type="email" id="email" placeholder="johndoe@email.com" required>
+                <br> <br>
+                <label for="username">
+                    Github Username
+                </label> <br>
+                <input name="us" type="text" id="username" placeholder="@yourusername" required>
+                <br> <br>
+                <input type="submit" value="Generate Your Ticket"> <br> <br>
             </fieldset>
         </form>
     </body>
