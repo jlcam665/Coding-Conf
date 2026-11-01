@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+body{
+    background-image: url('../assets/background-desktop.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+}
+nav ul{
+    
+}
+h1, h2, h3, p{
+    color: hsl(0, 0%, 100%);
+    font-family: "Inconsolata", monospace;
+}
+.Homepage #div1,
+.Homepage #div2{
+    text-align: center;
+}
