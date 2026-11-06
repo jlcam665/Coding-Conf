@@ -5,18 +5,68 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
-nav{
+
+/*Navigation bar*/
+#headerbar {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
-nav ul{
-    
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+#navbar{
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar a{
+    width: 5vw;
+    padding: 10px;
+    font-size: 15px; 
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: hsl(248, 70%, 10%);
+    background-color: hsl(7, 71%, 60%);
+    font-family: "Inconsolata", monospace;
+}
+#navbar a:hover{
+    background-color: hsl(0, 0%, 100%);
+}
+#navbar a:focus{
+    color: hsl(7, 71%, 60%);
+}
+
+
+
 h1, h2, h3, p{
     color: hsl(0, 0%, 100%);
     font-family: "Inconsolata", monospace;
 }
-.Homepage #div1,
-.Homepage #div2{
+.Homepage #mainBody{
     text-align: center;
 }
+
+#registerButton {
+    width: 30vw;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: hsl(248, 70%, 10%);
+    background-color: hsl(7, 71%, 60%);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Inconsolata", monospace;
+}
+#registerButton:hover{
+    background-color: hsl(0, 0%, 100%);
+}
+#registerButton:focus{
+    color: hsl(7, 71%, 60%);
+}
+/* fix the border appearing outside the container*/
