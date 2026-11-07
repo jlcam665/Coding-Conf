@@ -141,7 +141,7 @@ main div h1 .gradient {
 }
 .Login .uploadBox {
     width: 100%;
-    min-height: 120px;
+    min-height: 110px;
     margin: 5px 0;
     border: 1px dashed rgba(255, 255, 255, 0.6);
     border-radius: 10px;
@@ -155,15 +155,23 @@ main div h1 .gradient {
 .Login .uploadBox input[type="file"] {
     display: none;
 }
-.Login .uploadIcon {
+.Login .uploadIcon{
     width: 40px;
     height: 40px;
     cursor: pointer;
+    margin-bottom: 0px;
+    border-radius: 5px;
+    padding: 4px;
+    background-color: rgba(75, 72, 106, 0.5);
 }
 .Login #subtitle{
     font-size: 10px;
     color: rgba(255, 255, 255, 0.5);
 }
+.Login #imageUploadPrompt{
+    color: rgba(255, 255, 255, 0.5);
+}
+
 .Login #generateTicketButton{
     width: 105%;
     border: none;
