@@ -2,6 +2,7 @@
 body{
     min-height: 100vh;
     margin: 0;
+    overflow: hidden;
     background-image:
         url(../assets/pattern-squiggly-line-top.svg),
         url(../assets/pattern-squiggly-line-bottom-desktop.svg),
@@ -182,3 +183,101 @@ main div h1 .gradient {
 }
 
 /*Ticket*/
+.Ticket #headerbar{
+    justify-content: center !important;
+}
+.Ticket #mainBody{
+    min-height: 80vh;
+}
+.Ticket #mainBody section h1{
+    width: 70vw;
+    padding: 0%;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.Ticket #ticketArea {
+    position: relative;
+    width: min(600px, 90vw);
+    aspect-ratio: 600 / 280;
+
+    background-image: url("../assets/pattern-ticket.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.Ticket #text {
+    position: absolute;
+    inset: 5% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Ticket #topHalf {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.Ticket #topHalf img {
+    width: 300px;
+    max-width: 60%;
+}
+.Ticket #topHalf p {
+    margin: 0px 0px 0px 70px;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 100;
+}
+
+.Ticket #bottomHalf {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    gap: 15px;
+}
+.Ticket #bottomHalf > img {
+    width: 112px;
+    height: 112px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.Ticket #bottomHalf #userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 5px;
+}
+.Ticket #bottomHalf #userInfo h3 {
+    margin: 0;
+    text-align: left;
+    font-size: 40px;
+    font-weight: 300;
+}
+.Ticket #bottomHalf #userInfo #prt2 {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    gap: 5px;
+}
+.Ticket #bottomHalf #userInfo #prt2 img {
+    width: 16px;
+    height: 16px;
+}
+.Ticket #bottomHalf #userInfo #prt2 p {
+    margin: 0;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.Ticket #ticketNo {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    margin: 0;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: center;
+    text-align: center;
+}
