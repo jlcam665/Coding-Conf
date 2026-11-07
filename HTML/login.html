@@ -7,39 +7,51 @@
         <title>Login</title>
     </head>
     <body class="Login">
-        <header>
-            <nav>
-                <a href="../HTML/index.html" title="Coding Conference"><img src="../assets/logo-full.svg" alt="Coding Conf Logo"></a>
-            </nav>
+        <header id="headerbar">
+            <a href="../HTML/index.html" title="Coding Conference"><img src="../assets/logo-full.svg" alt="Coding Conf Logo"></a>
         </header>
-        <h1>Your Journey to Coding Conf 2026 Starts Here!</h1>
+        <main id="mainBody">
+            <section>
+                <h1>Your Journey to Coding Conf 2026 Starts Here!</h1>
         
-        <p>Secure your spot at next year's biggest coding conference.</p>
+                <p>Secure your spot at next year's biggest coding conference.</p>
+            </section>
+            <br>
+            <section>
+                <form action="">
+                    <label for="imageUpload">
+                        Upload Avatar
+                    </label>
+                    <fieldset>
+                        <input type="file" id="imageUpload" name="image" accept="image/*">
+                    </fieldset>
+                    
+                    <label for="name">
+                        Full Name
+                    </label>
+                    <fieldset>
+                        <input name="te" type="text" id="name" placeholder="John Doe" required>
+                    </fieldset>
+                    <label for="email">
+                        Email Address
+                    </label>
+                    <fieldset>
+                        <input name="em" type="email" id="email" placeholder="johndoe@email.com" required>
+                    </fieldset>
+                    
+                    <label for="username">
+                        Github Username
+                    </label>
+                    <fieldset>
+                        <input name="us" type="text" id="username" placeholder="@yourusername" required>
+                    </fieldset>
 
-        <form action="">
-            <fieldset>
-                <label for="imageUpload">
-                    Upload Avatar
-                </label> <br>
-                <input type="file" id="imageUpload" name="image" accept="image/*">
-                <br> <br>
-                <label for="name">
-                    Full Name
-                </label> <br>
-                <input name="te" type="text" id="name" placeholder="John Doe" required>
-                <br> <br>
-                <label for="email">
-                    Email Address
-                </label> <br>
-                <input name="em" type="email" id="email" placeholder="johndoe@email.com" required>
-                <br> <br>
-                <label for="username">
-                    Github Username
-                </label> <br>
-                <input name="us" type="text" id="username" placeholder="@yourusername" required>
-                <br> <br>
-                <input type="submit" value="Generate Your Ticket"> <br> <br>
-            </fieldset>
-        </form>
+                    <fieldset>
+                        <input type="submit" value="Generate Your Ticket" id="generateTicketButton"> <br> <br>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        
     </body>
 </html>

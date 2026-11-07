@@ -5,12 +5,13 @@ body{
     background-image:
         url(../assets/pattern-squiggly-line-top.svg),
         url(../assets/pattern-squiggly-line-bottom-desktop.svg),
+        url(../assets/pattern-circle.svg),
         url(../assets/pattern-lines.svg),
         url('../assets/background-desktop.png');
 
     background-repeat: no-repeat;
-    background-position: 100% 0%, 0% 100%, 0% 0%, 0% 0%;
-    background-size: 30vw auto, 30vw auto, cover, cover;
+    background-position: 100% 0%, 0% 100%, 4% -10%, 0% 0%, 0% 0%;
+    background-size: 30vw auto, 30vw auto, 10vw auto, cover, cover;
 }
 h1, h2, h3, p{
     color: hsl(0, 0%, 100%);
@@ -59,15 +60,15 @@ h1, h2, h3, p{
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
+    min-height: 70vh;
 }
-main div h2{
+main div h1{
     padding: 0%;
     font-size: 5vw;
     margin-top: 5px;
     margin-bottom: 5px;
 }
-main div h2 .gradient {
+main div h1 .gradient {
     background: linear-gradient(
         to right,
         hsl(0, 0%, 100%),
@@ -96,3 +97,47 @@ main div h2 .gradient {
     color: hsl(7, 71%, 60%);
 }
 /* fix the border appearing outside the container*/
+
+/*Login Page*/
+.Login #headerbar{
+    justify-content: center !important;
+}
+.Login #mainBody{
+    min-height: 80vh;
+}
+.Login #mainBody section h1{
+    width: 50vw;
+    padding: 0%;
+    font-size: 3vw;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.Login form{
+    text-align: left;
+    color: hsl(0, 0%, 100%);
+    font-family: "Inconsolata", monospace;
+}
+.Login form fieldset{
+    border: 0px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+}
+.Login form fieldset input{
+    width: 20vw;
+    padding: 10px;
+    border: 20px;
+    border-radius: 10px;
+    border-color: hsl(0, 0%, 100%);
+    background-color: rgba(75, 72, 106, 0.5);
+}
+.Login form fieldset input::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+
+    font-family: "Inconsolata", monospace;
+}
+.Login section form fieldset #generateTicketButton{
+    justify-content: center !important;
+}
