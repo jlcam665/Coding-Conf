@@ -19,18 +19,16 @@ h1, h2, h3, p{
 }
 
 /*Navigation bar*/
-#headerbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#navbar {
+#headerbar{
+    margin-top: 20px !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 #navbar{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 15px;
     margin: 0;
     padding: 0;
