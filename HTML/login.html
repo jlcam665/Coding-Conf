@@ -22,9 +22,22 @@
                     <label for="imageUpload">
                         Upload Avatar
                     </label>
-                    <fieldset>
-                        <input type="file" id="imageUpload" name="image" accept="image/*">
-                    </fieldset>
+
+                    <label for="imageUpload" class="uploadBox">
+
+                        <input type="file"
+                            id="imageUpload"
+                            name="image"
+                            accept="image/png, image/jpeg"
+                            required>
+
+                        <img src="../assets/icon-upload.svg" alt="Upload" class="uploadIcon">
+
+                        <p>Drag and drop or click to upload</p>
+
+                    </label>
+                    <small id="subtitle">ⓘ Upload your photo (JPG or PNG, max size: 500KB).</small>
+                    <br> <br>
                     
                     <label for="name">
                         Full Name
@@ -47,7 +60,7 @@
                     </fieldset>
 
                     <fieldset>
-                        <input type="submit" value="Generate Your Ticket" id="generateTicketButton"> <br> <br>
+                        <input type="submit" value="Generate My Ticket" id="generateTicketButton">
                     </fieldset>
                 </form>
             </section>
