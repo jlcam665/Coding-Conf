@@ -1,9 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 body{
-    background-image: url('../assets/background-desktop.png');
+    min-height: 100vh;
+    margin: 0;
+    background-image:
+        url(../assets/pattern-squiggly-line-top.svg),
+        url(../assets/pattern-squiggly-line-bottom-desktop.svg),
+        url(../assets/pattern-lines.svg),
+        url('../assets/background-desktop.png');
+
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-position: 100% 0%, 0% 100%, 0% 0%, 0% 0%;
+    background-size: 30vw auto, 30vw auto, cover, cover;
+}
+h1, h2, h3, p{
+    color: hsl(0, 0%, 100%);
+    font-family: "Inconsolata", monospace;
 }
 
 /*Navigation bar*/
@@ -19,14 +30,14 @@ body{
 }
 #navbar{
     display: flex;
-    gap: 10px;
+    gap: 15px;
     margin: 0;
     padding: 0;
 }
 
 #navbar a{
     width: 5vw;
-    padding: 10px;
+    padding:8px;
     font-size: 15px; 
     border-radius: 5px;
     text-align: center;
@@ -42,14 +53,29 @@ body{
     color: hsl(7, 71%, 60%);
 }
 
-
-
-h1, h2, h3, p{
-    color: hsl(0, 0%, 100%);
-    font-family: "Inconsolata", monospace;
-}
-.Homepage #mainBody{
+#mainBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    min-height: 100vh;
+}
+main div h2{
+    padding: 0%;
+    font-size: 5vw;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+main div h2 .gradient {
+    background: linear-gradient(
+        to right,
+        hsl(0, 0%, 100%),
+        hsl(7, 71%, 60%)
+    );
+
+    background-clip: text;
+    color: transparent;
 }
 
 #registerButton {
