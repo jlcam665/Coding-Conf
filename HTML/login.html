@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../CSS/style.css">
+        <script src="../js/validation.js"></script>
         <title>Login</title>
     </head>
     <body class="Login">
@@ -18,10 +19,8 @@
             </section>
             <br>
             <section>
-                <form action="">
-                    <label for="imageUpload">
-                        Upload Avatar
-                    </label>
+                <form action="" method="" id="registrationForm">
+                    <label for="imageUpload">Upload Avatar</label>
 
                     <label for="imageUpload" class="uploadBox">
 
@@ -34,29 +33,27 @@
                         <img src="../assets/icon-upload.svg" alt="Upload" class="uploadIcon">
 
                         <p id="imageUploadPrompt">Drag and drop or click to upload</p>
-
                     </label>
+                    <small class="error" id="imageError"></small>
                     <small id="subtitle">ⓘ Upload your photo (JPG or PNG, max size: 500KB).</small>
                     <br> <br>
                     
-                    <label for="name">
-                        Full Name
-                    </label>
+                    <label for="name">Full Name</label>
                     <fieldset>
                         <input name="te" type="text" id="name" placeholder="John Doe" required>
+                        <small class="error" id="nameError"></small>
                     </fieldset>
-                    <label for="email">
-                        Email Address
-                    </label>
+
+                    <label for="email">Email Address</label>
                     <fieldset>
                         <input name="em" type="email" id="email" placeholder="johndoe@email.com" required>
+                        <small class="error" id="emailError"></small>
                     </fieldset>
                     
-                    <label for="username">
-                        Github Username
-                    </label>
+                    <label for="username">Github Username</label>
                     <fieldset>
                         <input name="us" type="text" id="username" placeholder="@yourusername" required>
+                        <small class="error" id="usernameError"></small>
                     </fieldset>
 
                     <fieldset>
