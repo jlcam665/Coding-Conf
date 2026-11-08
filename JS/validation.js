@@ -1,51 +1,84 @@
-
 const form = document.getElementById("registrationForm");
+const fileInput = document.getElementById("imageUpload");
+const avatarPreview = document.getElementById("avatarPreview");
+const uploadIcon = document.getElementById("uploadIcon");
+const uploadPrompt = document.getElementById("imageUploadPrompt");
+const imageError = document.getElementById("imageError");
+const avatarActions = document.getElementById("avatarActions");
+const removeButton = document.getElementById("removeImageButton");
+const changeButton = document.getElementById("changeImageButton");
 
-form.addEventListener("submit", function(event) {
+let avatarFile = null;
 
-    event.preventDefault();
+//Used to go back to the "click to upload" state
+function resetImage() {
+    avatarFile = null;
+    fileInput.value = "";
+    avatarPreview.removeAttribute("src");
+    avatarPreview.hidden = true;
+    uploadIcon.hidden = false;
+    uploadPrompt.hidden = false;
+    avatarActions.hidden = true;
+}
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const github = document.getElementById("username").value.trim();
-    const avatar = document.getElementById("imageUpload").files[0];
+//Check the file, then show it
+function handleFile(file) {
+    imageError.textContent = "";
 
-    //GitHub username check
-    const githubPattern = /^@[A-Za-z0-9-]+$/;
-
-    if (!githubPattern.test(github)) {
-        alert("Please enter a valid GitHub username beginning with @.");
+    if (file.type !== "image/png" && file.type !== "image/jpeg") {
+        resetImage();
+        imageError.textContent = "Please upload a PNG or JPEG image.";
+        return;
+    }
+    if (file.size > 500 * 1024) {
+        resetImage();
+        imageError.textContent = "Your image must be smaller than 500KB.";
         return;
     }
 
-    //Avatar check
-    if (!avatar) {
-        alert("Please upload an avatar.");
-        return;
-    }
-    if (avatar.type !== "image/png" && avatar.type !== "image/jpeg") {
-        alert("Please upload a PNG or JPEG image.");
-        return;
-    }
-    if (avatar.size > 500 * 1024) {
-        alert("Your image must be smaller than 500KB.");
-        return;
-    }
+    avatarFile = file;
 
     const reader = new FileReader();
+    reader.onload = function () {
+        avatarPreview.src = reader.result;
+        avatarPreview.hidden = false;
+        uploadIcon.hidden = true;
+        uploadPrompt.hidden = true;
+        avatarActions.hidden = false;
+    };
+    reader.readAsDataURL(file);
+}
 
-    reader.onload = function() {
-        const ticketData = {
-            name: name,
-            email: email,
-            github: github,
-            avatar: reader.result
-        };
+//For uploading an image
+fileInput.addEventListener("change", function () {
+    if (fileInput.files[0]) {
+        handleFile(fileInput.files[0]);
+    }
+});
 
-        sessionStorage.setItem("ticketData", JSON.stringify(ticketData));
+changeButton.addEventListener("click", function () {
+    fileInput.click();
+});
+removeButton.addEventListener("click", function () {
+    imageError.textContent = "";
+    resetImage();
+});
 
-        window.location.href = "ticket.html";
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (!avatarFile) {
+        imageError.textContent = "Please upload an avatar.";
+        return;
+    }
+
+    const ticketData = {
+        name: document.getElementById("name").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        github: document.getElementById("username").value.trim(),
+        avatar: avatarPreview.src // the image as a data URL
     };
 
-    reader.readAsDataURL(avatar);
+    sessionStorage.setItem("ticketData", JSON.stringify(ticketData));
+    window.location.href = "ticket.html";
 });

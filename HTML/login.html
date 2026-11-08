@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../CSS/style.css">
-        <script src="../js/validation.js"></script>
+        <script src="../js/validation.js" defer></script>
         <title>Login</title>
     </head>
     <body class="Login">
@@ -19,22 +19,22 @@
             </section>
             <br>
             <section>
-                <form action="" method="" id="registrationForm">
+                <form id="registrationForm">
                     <label for="imageUpload">Upload Avatar</label>
 
                     <label for="imageUpload" class="uploadBox">
-
-                        <input type="file"
-                            id="imageUpload"
-                            name="image"
-                            accept="image/png, image/jpeg"
-                            required>
-
-                        <img src="../assets/icon-upload.svg" alt="Upload" class="uploadIcon">
-
-                        <p id="imageUploadPrompt">Drag and drop or click to upload</p>
+                        <input type="file" id="imageUpload" name="image" accept="image/png, image/jpeg">
+                        <img src="../assets/icon-upload.svg" alt="Upload" class="uploadIcon" id="uploadIcon">
+                        <img id="avatarPreview" alt="Preview of your uploaded avatar" hidden>
+                        <p id="imageUploadPrompt">Click to upload</p>
+                        <small class="error" id="imageError"></small>
                     </label>
-                    <small class="error" id="imageError"></small>
+
+                    <div id="avatarActions" hidden>
+                        <button type="button" id="removeImageButton">Remove image</button>
+                        <button type="button" id="changeImageButton">Change image</button>
+                    </div>
+
                     <small id="subtitle">ⓘ Upload your photo (JPG or PNG, max size: 500KB).</small>
                     <br> <br>
                     
@@ -52,7 +52,7 @@
                     
                     <label for="username">Github Username</label>
                     <fieldset>
-                        <input name="us" type="text" id="username" placeholder="@yourusername" required>
+                        <input pattern="@[A-Za-z0-9\-]+" name="us" type="text" id="username" placeholder="@yourusername" required>
                         <small class="error" id="usernameError"></small>
                     </fieldset>
 

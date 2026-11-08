@@ -2,7 +2,7 @@
 body{
     min-height: 100vh;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     background-image:
         url(../assets/pattern-squiggly-line-top.svg),
         url(../assets/pattern-squiggly-line-bottom-desktop.svg),
@@ -67,7 +67,7 @@ main div h1{
     margin-top: 5px;
     margin-bottom: 5px;
 }
-main div h1 .gradient {
+.gradient {
     background: linear-gradient(
         to right,
         hsl(0, 0%, 100%),
@@ -112,6 +112,7 @@ main div h1 .gradient {
     margin-bottom: 5px;
 }
 
+
 .Login form {
     width: min(350px, 90vw);
     margin: 0 auto;
@@ -138,6 +139,11 @@ main div h1 .gradient {
     color: rgba(255, 255, 255, 0.5);
     font-family: "Inconsolata", monospace;
 }
+.Login form input,
+.Login .uploadBox {
+    box-sizing: border-box;
+}
+
 .Login .uploadBox {
     width: 100%;
     min-height: 110px;
@@ -180,6 +186,42 @@ main div h1 .gradient {
     border-radius: 10px;
     font-family: "Inconsolata", monospace;
     background-color: hsl(7, 88%, 67%);
+}
+
+.Login #avatarPreview {
+    max-width: 100%;
+    max-height: 100px;
+    border-radius: 10px;
+}
+.Login .uploadBox {
+    cursor: pointer;
+}
+.Login .error {
+    color: hsl(7, 71%, 60%);
+    text-align: center;
+}
+
+.Login #avatarActions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+.Login #avatarActions[hidden] {
+    display: none;
+}
+.Login #avatarActions button {
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    font-family: "Inconsolata", monospace;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(75, 72, 106, 0.5);
+}
+.Login #avatarActions button:hover {
+    background-color: rgba(75, 72, 106, 0.9);
 }
 
 /*Ticket*/
@@ -275,9 +317,118 @@ main div h1 .gradient {
     right: 3%;
     top: 50%;
     margin: 0;
-    font-size: 20px;
+    font-size: 30px;
     color: rgba(255, 255, 255, 0.5);
     transform: translateY(-50%) rotate(90deg);
     transform-origin: center;
     text-align: center;
+}
+
+/* ===== Tablet and mobile ===== */
+@media (max-width: 1024px) {
+    body {
+        background-image:
+            url(../assets/pattern-squiggly-line-top.svg),
+            url(../assets/pattern-squiggly-line-bottom-mobile-tablet.svg),
+            url(../assets/pattern-circle.svg),
+            url(../assets/pattern-lines.svg),
+            url('../assets/background-tablet.png');
+        background-size: 30vw auto, 60vw auto, 10vw auto, cover, cover;
+    }
+
+    /* the nav links were 5vw wide, which is too narrow once the screen shrinks */
+    #navbar a {
+        width: auto;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        background-image:
+            url(../assets/pattern-squiggly-line-top.svg),
+            url(../assets/pattern-squiggly-line-bottom-mobile-tablet.svg),
+            url(../assets/pattern-circle.svg),
+            url(../assets/pattern-lines.svg),
+            url('../assets/background-mobile.png');
+        background-size: 30vw auto, 70vw auto, 30vw auto, cover, cover;
+    }
+
+    /* Homepage (no mobile design given, so this is a best guess) */
+    main div h1 {
+        font-size: 9vw;
+    }
+    #registerButton {
+        width: 80vw;
+        font-size: 18px;
+    }
+
+    /* Login page */
+    .Login #mainBody section h1 {
+        width: 90vw;
+        font-size: 28px;
+    }
+    .Login #mainBody section:first-of-type p {
+        font-size: 18px;
+    }
+    .Login form {
+        width: calc(100vw - 32px);
+    }
+    .Login form fieldset input:not([type="file"]):not([type="submit"]) {
+        padding: 14px;
+        font-size: 16px; /* under 16px, iPhones zoom the page when you tap a field */
+    }
+    .Login #generateTicketButton {
+        padding: 14px;
+        font-size: 18px;
+    }
+
+    /* Ticket page: heading */
+    .Ticket #mainBody #mainText {
+        width: 90vw;
+        margin-bottom: 48px;
+    }
+    .Ticket #mainBody #mainText h1 {
+        display: inline; /* the two <h1>s run together like in the design */
+        font-size: 28px;
+    }
+    .Ticket #mainBody #mainText p {
+        font-size: 18px;
+    }
+
+    /* Ticket page: the ticket itself */
+    .Ticket #ticketArea {
+        width: calc(100vw - 32px);
+    }
+    .Ticket #text {
+        inset: 10% 5%;
+    }
+    .Ticket #topHalf img {
+        width: 160px;
+    }
+    .Ticket #topHalf p {
+        margin-left: 40px;
+        font-size: 12px;
+    }
+    .Ticket #bottomHalf {
+        gap: 12px;
+    }
+    .Ticket #bottomHalf > img {
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+    }
+    .Ticket #bottomHalf #userInfo h3 {
+        font-size: 18px;
+    }
+    .Ticket #bottomHalf #userInfo #prt2 img {
+        width: 14px;
+        height: 14px;
+    }
+    .Ticket #bottomHalf #userInfo #prt2 p {
+        font-size: 12px;
+    }
+    .Ticket #ticketNo {
+        font-size: 14px;
+    }
 }

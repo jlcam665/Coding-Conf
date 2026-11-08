@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../CSS/style.css">
-        <script src="../js/ticket.js"></script>
+        <script src="../js/ticket.js" defer></script>
         <title>Ticket</title>
     </head>
     <body class="Ticket">
@@ -13,9 +13,9 @@
         </header>
         <main id="mainBody">
             <section id="mainText">
-                <h1>Congrats, ---!</h1>
+                <h1>Congrats, <span id="headerName" class="gradient">---</span>!</h1>
                 <h1>Your ticket is ready.</h1>
-                <p>We've emailed your ticket to --- and will send updates in the run up to the event.</p>
+                <p>We've emailed your ticket to <span id="headerEmail">---</span> and will send updates in the run up to the event.</p>
             </section>
             <section id="ticketArea">
                 <div id="text">
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </div>
-                <p id="ticketNo">ticket#</p>
+                <p id="ticketNo">#01609</p>
             </section>
             
         </main>
