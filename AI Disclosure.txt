@@ -1,0 +1,53 @@
+===========================================================================
+
+🏛️ SCIT Web Programming - AI DISCLOSURE BLOCK
+
+===========================================================================
+
+File Name:      [e.g., main.cpp, binary_tree.py]
+
+Student Name:   [Jordon Cameron]
+
+Student ID:     [2507369]
+
+Assignment:     [IA#2]
+
+Date:           [07/11/2026]
+
+-----------------------------------------------------------------------------
+
+🤖 GENERIC AI TOOL UTILISED (Check all that apply):
+
+[ ] GitHub Copilot     [ ] ChatGPT     [/] Claude     [ ] Gemini     [ ] None
+
+-----------------------------------------------------------------------------
+
+📝 SCOPE OF WORK & DEBUGGING LOG:
+
+1. Specific Bug/Error Encountered:
+   The generate ticket button on the login page was not taking me to the expected result. Persistence across pages was also a bit tricky to get working.
+
+2. Exact Prompt Sent to AI Tool:
+   "The generate ticket button in login takes me to the ticket page, but nothing on the ticket changes. Could you identify the issue?"
+
+3. Resolution/Fix Applied:
+
+   I added "defer" to the javascript link in the head area. I also researched and implemented various new tags the AI identified when it produced a more convoluted solution.
+
+-----------------------------------------------------------------------------
+
+⚠️ INTEGRITY VERIFICATION DECLARATION:
+
+By submitting this file, I certify that the core algorithmic logic, program
+
+architecture, and data structures implemented herein are entirely my own
+
+authentic work. AI assistance was restricted strictly to debugging and/or
+
+generating explanatory documentation comments in full compliance with the
+
+course syllabus.
+
+ 
+
+Student Electronic Signature: [J.C/Jordon Cameron]

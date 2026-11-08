@@ -324,7 +324,7 @@ main div h1{
     text-align: center;
 }
 
-/* ===== Tablet and mobile ===== */
+/*Tablet and mobile*/
 @media (max-width: 1024px) {
     body {
         background-image:
@@ -336,7 +336,6 @@ main div h1{
         background-size: 30vw auto, 60vw auto, 10vw auto, cover, cover;
     }
 
-    /* the nav links were 5vw wide, which is too narrow once the screen shrinks */
     #navbar a {
         width: auto;
         padding: 8px 16px;
@@ -354,7 +353,7 @@ main div h1{
         background-size: 30vw auto, 70vw auto, 30vw auto, cover, cover;
     }
 
-    /* Homepage (no mobile design given, so this is a best guess) */
+    /*Homepage*/
     main div h1 {
         font-size: 9vw;
     }
@@ -363,7 +362,7 @@ main div h1{
         font-size: 18px;
     }
 
-    /* Login page */
+    /*Login page*/
     .Login #mainBody section h1 {
         width: 90vw;
         font-size: 28px;
@@ -376,27 +375,27 @@ main div h1{
     }
     .Login form fieldset input:not([type="file"]):not([type="submit"]) {
         padding: 14px;
-        font-size: 16px; /* under 16px, iPhones zoom the page when you tap a field */
+        font-size: 16px;
     }
     .Login #generateTicketButton {
         padding: 14px;
         font-size: 18px;
     }
 
-    /* Ticket page: heading */
+    /*Ticket page: heading*/
     .Ticket #mainBody #mainText {
         width: 90vw;
         margin-bottom: 48px;
     }
     .Ticket #mainBody #mainText h1 {
-        display: inline; /* the two <h1>s run together like in the design */
+        display: inline;
         font-size: 28px;
     }
     .Ticket #mainBody #mainText p {
         font-size: 18px;
     }
 
-    /* Ticket page: the ticket itself */
+    /*Ticket page: the ticket itself*/
     .Ticket #ticketArea {
         width: calc(100vw - 32px);
     }
